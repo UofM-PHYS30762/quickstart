@@ -120,17 +120,17 @@ Also, vim is better than emacs. Fight me.
 #### Installing a compiler
 
 We suggest to install the latest gcc compilers using mingw. Simple instructions on how to do this are 
-<[at this link](https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain)>
+[at this link](https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain)
 
 #### Installing a text editor
 
 You can use any text editor you'd like, and we suggest an Integrated Development Environment (IDE) like Visual Studio Code. You don't need to use all the features (e.g. automatic compilation etc...) and we will not necessarily do so in the course, but this provides a terminal as well where you can enter your commands as well as the text editor. 
 
-You can download and install Visual Studio Code from <[here](https://code.visualstudio.com/docs/setup/windows)>. This website also has instructions on how to set up and configure the IDE to work with the gcc compiler above.
+You can download and install Visual Studio Code from [here](https://code.visualstudio.com/docs/setup/windows). This website also has instructions on how to set up and configure the IDE to work with the gcc compiler above.
 
 ## Instructions for lxplus (WIP)
 
-If you have an lxplus account, all you need to do is to set up a recent compiler, and you should be all set to start! This is generally done for you in the most recent lxplus nodes (lxplus9) but you can also choose your the compiler from one of the most recent <[LCG releases](https://lcginfo.cern.ch)>. An introduction to the LCG releases and their use in practice is <[here]|(https://lcgdocs.web.cern.ch/lcgdocs/lcgreleases/introduction/)>
+If you have an lxplus account, all you need to do is to set up a recent compiler, and you should be all set to start! This is generally done for you in the most recent lxplus nodes (lxplus9) but you can also choose your the compiler from one of the most recent [LCG releases](https://lcginfo.cern.ch). An introduction to the LCG releases and their use in practice is [here](https://lcgdocs.web.cern.ch/lcgdocs/lcgreleases/introduction/)
 
 The way to do this is:
 
