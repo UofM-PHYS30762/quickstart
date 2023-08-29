@@ -45,6 +45,15 @@ xcode-select --install
 
 (we also remind you not to use XCode as a development platform as it generally comes with clang)
 
+Note: it's better to uninstall/reinstall xcode to make sure you have the most recent version. 
+You can do that with:
+
+```
+sudo rm -rf /Library/Developer/CommandLineTools
+xcode-select --install
+```
+(this is for users that don't usually do much with CommandLineTools and have no special configuration - take care and do backup anything you'd like to keep or port if you're not in this category!)
+
 ##### gcc/g++ from homebrew 
 
 Then, install the gcc/g++ suite from homebrew:
@@ -61,7 +70,7 @@ It may take a while for it to complete, but at the end you should have the follo
 /usr/local/bin/g++-11
 ```
 
-In more recent version of homebrew, you may find this file in a different brew directory - we can sort this out during the course. 
+In more recent version of homebrew, you may find this file in a different brew directory, e.g. /usr/local/Cellar/ or /opt/homebrew/bin/ - we can sort this out during the course. 
 
 Note: Another option to install the compiler is to use MacPorts (ports.macports.org/port/gcc11) but we haven't tested that this works yet.
 
@@ -69,8 +78,15 @@ Note: Another option to install the compiler is to use MacPorts (ports.macports.
 
 Finally, you can tell Visual Studio Code to use it if you're using that as an IDE (this is not necessary, you can and maybe should always use the terminal!)
 
-You should then open VS Code and go to Preferences -> Settings, and the main window of VS Code will turn into a list of settings. In the top bar, search for "compiler" and you should see  C_Cpp › Default: Compiler Path.  Put in /usr/local/bin/g++-11
-Then try to type a simple code in the editor window, e.g. the one below: 
+You should then open VS Code and go to Settings, which is the wheel on the bottom of the window  (this was found as File->Preferences->Settings in older versions), The main window of VS Code will turn into a list of settings. 
+
+In the top bar, search for "compiler" and you should see  C_Cpp › Default: Compiler Path.  Put in:
+
+```
+[your installation path from brew]/g++-13
+```
+
+Then write a simple code in the editor window, e.g. the one below: 
 
 ```
 // L1/simple.cpp
@@ -87,8 +103,10 @@ return 0;
 ```
 
 Then, try to compile it (this is called a "build task" in Visual Studio). 
+
 What a build task does is calling the compiler with some flags (you could also do the same in the terminal window yourself).  
 By default, you will have clang installed or mac's version of g++ (which is basically clang so it's not good) and Visual Studio will use that. 
+
 But if your installation of gcc/g++11 or gcc12 went well, you should see g++11 or 12 in the drop-down menu. You should also be able to choose g++11 as the option if you are starting Visual Studio for the first time. 
 
 ### Linux 
@@ -116,3 +134,23 @@ If you have an lxplus account, all you need to do is to set up a recent compiler
 
 ## Instructions for using lab computers (coming soon) 
 
+## Troubleshooting
+
+### Mac 
+
+If you have an error like this on the hello world program:
+
+```
+/usr/local/Cellar/gcc/13.1.0/bin/g++-13 --std=c++20 -c -g -Wall -Wextra -o hello.o hello.cpp
+In file included from /usr/local/Cellar/gcc/13.1.0/include/c++/13/bits/postypes.h:40,
+                 from /usr/local/Cellar/gcc/13.1.0/include/c++/13/iosfwd:42,
+                 from /usr/local/Cellar/gcc/13.1.0/include/c++/13/ios:40,
+                 from /usr/local/Cellar/gcc/13.1.0/include/c++/13/ostream:40,
+                 from /usr/local/Cellar/gcc/13.1.0/include/c++/13/iostream:41,
+                 from hello.cpp:3:
+/usr/local/Cellar/gcc/13.1.0/include/c++/13/cwchar:44:10: fatal error: wchar.h: No such file or directory
+   44 | #include <wchar.h>
+      |          ^~~~~~~~~
+compilation terminated.
+```
+it means that your Command Line Tools are too old, and you need to uninstall/reinstall as above. This will usually take 10-15' on a recent mac. 
