@@ -130,7 +130,13 @@ You can download and install Visual Studio Code from <[here](https://code.visual
 
 ## Instructions for lxplus (WIP)
 
-If you have an lxplus account, all you need to do is to set up a recent compiler, and you should be all set to start! This is generally done for you in the most recent lxplus nodes (lxplus9) but you can also choose your the compiler from one of the most recent <[LCG releases](https://lcginfo.cern.ch)>. 
+If you have an lxplus account, all you need to do is to set up a recent compiler, and you should be all set to start! This is generally done for you in the most recent lxplus nodes (lxplus9) but you can also choose your the compiler from one of the most recent <[LCG releases](https://lcginfo.cern.ch)>. An introduction to the LCG releases and their use in practice is <[here]|(https://lcgdocs.web.cern.ch/lcgdocs/lcgreleases/introduction/)>
+
+The way to do this is:
+
+```
+source /cvmfs/sft.cern.ch/lcg/contrib/gcc/13/x86_64-el9.sh
+```
 
 ## Instructions for using lab computers (coming soon) 
 
