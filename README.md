@@ -154,6 +154,14 @@ source /cvmfs/sft.cern.ch/lcg/contrib/gcc/13/x86_64-el9.sh
 ```
 ## Troubleshooting
 
+### A reminder: make it easy for others to help you
+
+Make sure that your question is posed as a Minimal Reproducible Example: https://stackoverflow.com/help/minimal-reproducible-example
+
+### VS Code can't find the compilers in the drop down menu
+
+If a .cpp file is opened in standalone mode without opening the corresponding folder, VS Code won’t allow build tasks to be ran and it looks like the compilers aren’t picked up (probably because of a security popup where one needs to press OK when opening a folder). The solution is to open a folder from the File menu and put your .cpp file in there.
+
 ### Conda can be a slithering problem
 
 If for any Python courses you've installed Conda and have an environment set up for you at start up, it may mess with your environment variables - some errors we've seen include mention of an _unsupported tapi file type_. You should edit your .bash_rc or .zsh_rc file in a terminal (which tells your system what to load at startup), it's usually in your home/ directory. The easiest way to go ahead is to move the ./bash_profile file to ./bash_profile_conda, and create a new empty ./bash_profile, and then restart VS Code. 
