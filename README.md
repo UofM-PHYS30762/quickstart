@@ -2,6 +2,14 @@
 
 This guide contains instructions on how to set up your laptop for coding, compiling and running C++ programs. 
 
+## Instructions for using lab computers
+
+You should use Visual Studio Code as an Integrated Development Environment (IDE). Note: unlike last years, DO NOT USE Visual Studio 2019) and all installation will be ready for you thanks to IT Services. 
+
+To test that things work correctly and get accustomed to what the various commands do, there is a [tutorial on the VS Code website](https://code.visualstudio.com/docs/cpp/config-mingw#_create-a-hello-world-app) that you should follow before starting with your code. 
+
+If you have any issues, contact the course leaders and demonstrators during the lab sessions so that we can add it to the common knowledge of troubleshooting below. 
+
 ## Instructions if you bring your own laptop 
 
 ### Mac 
@@ -76,7 +84,7 @@ Note: Another option to install the compiler is to use MacPorts (ports.macports.
 
 ##### Using a compiler with automated compilation in VS Code (optional) 
 
-Finally, you can tell Visual Studio Code to use it if you're using that as an IDE (this is not necessary, you can and maybe should always use the terminal!)
+Finally, you can tell Visual Studio Code to use this compiler, if you're using that as an Integrated Development Environment (IDE).
 
 You should then open VS Code and go to Settings, which is the wheel on the bottom of the window  (this was found as File->Preferences->Settings in older versions), The main window of VS Code will turn into a list of settings. 
 
@@ -109,26 +117,33 @@ By default, you will have clang installed or mac's version of g++ (which is basi
 
 But if your installation of gcc/g++11 or gcc12 went well, you should see g++11 or 12 in the drop-down menu. You should also be able to choose g++11 as the option if you are starting Visual Studio for the first time. 
 
-### Linux 
-
-The installation of the compiler and text editor of your choice will depend on the Linux distribution you have - feel free to fork this repository and make a pull request for your configuration as it will help others! 
-
-Also, vim is better than emacs. Fight me. 
-
 ### Windows
 
 #### Installing a compiler
 
 We suggest to install the latest gcc compilers using mingw. Simple instructions on how to do this are 
-[at this link](https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain)
+[at this link](https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain
 
-#### Installing a text editor
+Pay particular attention to how you set up PATH variables because this 
 
-You can use any text editor you'd like, and we suggest an Integrated Development Environment (IDE) like Visual Studio Code. You don't need to use all the features (e.g. automatic compilation etc...) and we will not necessarily do so in the course, but this provides a terminal as well where you can enter your commands as well as the text editor. 
+#### Installing a text editor / IDE
 
-You can download and install Visual Studio Code from [here](https://code.visualstudio.com/docs/setup/windows). This website also has instructions on how to set up and configure the IDE to work with the gcc compiler above.
+We suggest you use an Integrated Development Environment (IDE) like Visual Studio Code. You don't need to use all the features (e.g. automatic compilation etc...) and we will not necessarily do so in the course, but this is convenient as it:
+  * provides a terminal as well where you can enter your commands
+  * automatically build (compile) your code and run it
+  * have a visual interface for a debugger 
 
-## Instructions for lxplus (WIP)
+You can download and install Visual Studio Code from [here](https://code.visualstudio.com/docs/setup/windows). 
+
+This website also has a tutorial on how to set up and configure the IDE to work with the gcc compiler above - if you follow them.
+
+### Linux 
+
+The installation of the compiler and text editor of your choice will depend on the Linux distribution you have - feel free to fork this repository and make a pull request for your configuration as it will help others! The suggestion is to use Visual Studio Code, instructions are [here](https://code.visualstudio.com/docs/cpp/config-linux).
+
+If you don't want to use Visual Studio Code, vim is better than emacs. Fight me. 
+
+## Instructions for lxplus (for users with a CERN account and access to the CERN computing cluster)
 
 If you have an lxplus account, all you need to do is to set up a recent compiler, and you should be all set to start! This is generally done for you in the most recent lxplus nodes (lxplus9) but you can also choose your the compiler from one of the most recent [LCG releases](https://lcginfo.cern.ch). An introduction to the LCG releases and their use in practice is [here](https://lcgdocs.web.cern.ch/lcgdocs/lcgreleases/introduction/)
 
@@ -137,10 +152,11 @@ The way to do this is:
 ```
 source /cvmfs/sft.cern.ch/lcg/contrib/gcc/13/x86_64-el9.sh
 ```
-
-## Instructions for using lab computers (coming soon) 
-
 ## Troubleshooting
+
+### Conda can be a slithering problem
+
+If for any Python courses you've installed Conda and have an environment set up for you at start up, it may mess with your environment variables - some errors we've seen include mention of an _unsupported tapi file type_. You should edit your .bash_rc or .zsh_rc file in a terminal (which tells your system what to load at startup), it's usually in your home/ directory. The easiest way to go ahead is to move the ./bash_profile file to ./bash_profile_conda, and create a new empty ./bash_profile, and then restart VS Code. 
 
 ### Mac 
 
@@ -159,4 +175,4 @@ In file included from /usr/local/Cellar/gcc/13.1.0/include/c++/13/bits/postypes.
       |          ^~~~~~~~~
 compilation terminated.
 ```
-it means that your Command Line Tools are too old, and you need to uninstall/reinstall as above. This will usually take 10-15' on a recent mac. 
+it means that your Command Line Tools are too old, and you need to uninstall/reinstall as above. This will usually take 10-15' on a recent mac, and you can find instructions [here](https://mac.install.guide/commandlinetools/7.html).
