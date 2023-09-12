@@ -166,7 +166,7 @@ If a .cpp file is opened in standalone mode without opening the corresponding fo
 
 If for any Python courses you've installed Conda and have an environment set up for you at start up, it may mess with your environment variables - some errors we've seen include mention of an _unsupported tapi file type_. You should edit your .bash_rc or .zsh_rc file in a terminal (which tells your system what to load at startup), it's usually in your home/ directory. The easiest way to go ahead is to move the ./bash_profile file to ./bash_profile_conda, and create a new empty ./bash_profile, and then restart VS Code. 
 
-### Mac 
+### Mac wchar.h issues
 
 If you have an error like this on the hello world program:
 
