@@ -4,7 +4,7 @@ This guide contains instructions on how to set up your laptop for coding, compil
 
 ## Instructions for using lab computers
 
-You should use Visual Studio Code as an Integrated Development Environment (IDE). Note: unlike last years, DO NOT USE Visual Studio 2019) and all installation will be ready for you thanks to IT Services. 
+You should use Visual Studio Code as an Integrated Development Environment (IDE) and all installation will be ready for you thanks to IT Services. Note: unlike last years, DO NOT USE Visual Studio 2019!! 
 
 To test that things work correctly and get accustomed to what the various commands do, there is a [tutorial on the VS Code website](https://code.visualstudio.com/docs/cpp/config-mingw#_create-a-hello-world-app) that you should follow before starting with your code. 
 
