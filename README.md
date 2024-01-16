@@ -152,6 +152,11 @@ The way to do this is:
 ```
 source /cvmfs/sft.cern.ch/lcg/contrib/gcc/13/x86_64-el9.sh
 ```
+
+## Installing Git 
+
+Instructions on how to install Git on Linux, Mac and Windows are here: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git. 
+
 ## Troubleshooting
 
 ### A reminder: make it easy for others to help you
